@@ -1,4 +1,3 @@
-//https://github.com/armintorkzadeh95/blog-client-template
 // Vänta tills HTML-innehållet är helt laddat innan du kör skriptet
 document.addEventListener("DOMContentLoaded", function () {
     // API-slutpunkt för att hämta blogginlägg
