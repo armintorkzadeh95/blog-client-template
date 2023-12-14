@@ -6,7 +6,7 @@ function fetchPostDetails(postIndex) {
     fetch(apiUrl)
         .then(response => response.json())
         .then(post => displayPostDetails(post))
-        .catch(error => console.error('Error fetching post:', error));
+        .catch(error => console.error('Error fetching post:', error.message));
 }
 
 // Funktion för att visa inläggsdetaljer på sidan
