@@ -29,6 +29,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const params = new URLSearchParams(queryString);
     const postId = params.get('id');
 
+    console.log("Query String:", queryString);
+
     if (postId) {
         console.log("Post ID:", postId);
         fetchPostDetails(postId);
