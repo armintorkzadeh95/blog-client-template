@@ -1,9 +1,22 @@
+// Hämta frågesträngen från URL:en
+const queryString = window.location.search;
+
+// Analysera frågesträngen för att få ett objekt med parameter-värdepar
+const params = new URLSearchParams(queryString);
+
+// Hämta värdet som är kopplat till parametern "id".
+const postId = params.get('id');
+
+// Logga postId till konsolen
+console.log("Post ID:", postId);
+
 // Förutsatt att du har en API-slutpunkt som denna
 const apiUrl = "https://blog-api-assignment.up.railway.app/posts";
 
 document.addEventListener("DOMContentLoaded", function () {
     // Befintliga kod här
-    fetchPostDetails(0);});
+    fetchPostDetails(postId);
+});
 
 function fetchPostDetails(postIndex) {
     // Gör GET-förfrågan till API-slutpunkten
