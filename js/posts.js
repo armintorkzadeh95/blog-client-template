@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .then(posts => displayBlogPosts(posts))
         .catch(error => console.error('Error fetching blog posts:', error));
-    
+
     // Funktion för att visa blogginlägg på sidan
     function displayBlogPosts(posts) {
         // Hämta containerelementet där blogginlägg kommer att visas
@@ -29,18 +29,30 @@ document.addEventListener("DOMContentLoaded", function () {
                 <p>Author: ${post.author}</p>
                 <p>Date: ${post.date}</p>
                 <p>${truncateText(post.content, 100)}</p>
-                <a href="#" onclick="readMore('${post.content}')">Read more...</a>
+                <a href="#" class="read-more-link" data-post-id="${post.id}">Read more...</a>
                 <p>Tags: ${post.tags ? post.tags.join(', ') : 'No tags'}</p>
                 <hr>
             `;
             // Lägg till postelementet i blogginläggsbehållaren
             blogPostsContainer.appendChild(postElement);
         });
+
+        // Add event listeners to "Read more" links
+        const readMoreLinks = document.querySelectorAll('.read-more-link');
+        readMoreLinks.forEach(link => {
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+                const postId = this.getAttribute('data-post-id');
+                window.location.href = `post.html?id=${postId}`;
+            });
+        });
     }
+
     // Funktion för att trunkera text till en angiven maximal längd
     function truncateText(text, maxLength) {
         return text.length > maxLength ? text.slice(0, maxLength) + '...' : text;
     }
+
     // Funktion för att visa en läs mer-varning med hela innehållet
     window.readMore = function(content) {
         alert(content);
