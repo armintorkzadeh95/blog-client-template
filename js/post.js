@@ -1,5 +1,5 @@
 // API-slutpunkt för blogginlägg
-const apiUrl = `https://blog-api-assignment.up.railway.app/posts/${id}`;
+const apiUrl = `https://blog-api-assignment.up.railway.app/posts/${postId}`;
 
 // Funktion för att hämta inläggsdetaljer med postId
 function fetchPostDetails(postIndex) {
