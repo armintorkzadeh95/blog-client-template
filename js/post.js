@@ -14,7 +14,7 @@ console.log("Post ID:", postId);
 const apiUrl = "https://blog-api-assignment.up.railway.app/posts";
 
 document.addEventListener("DOMContentLoaded", function () {
-    // Befintliga kod här
+    // Använd postId-variabeln i funktionen fetchPostDetails
     fetchPostDetails(postId);
 });
 
