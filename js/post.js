@@ -21,14 +21,12 @@ function displayPostDetails(post) {
 function goBack() {
     window.history.back();
 }
-postId;
 
 // Händelseavlyssnare för DOMContentLoaded för att hämta inläggsdetaljer
 document.addEventListener("DOMContentLoaded", function () {
     const queryString = window.location.search;
     const params = new URLSearchParams(queryString);
     const postId = params.get('id');
-    const apiUrl = `https://blog-api-assignment.up.railway.app/posts/${postId}`;
 
     console.log("Query String:", queryString);
 
