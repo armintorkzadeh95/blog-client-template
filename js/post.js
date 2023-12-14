@@ -28,7 +28,7 @@ let postId;
 document.addEventListener("DOMContentLoaded", function () {
     const queryString = window.location.search;
     const params = new URLSearchParams(queryString);
-    const postId = params.get('id');
+    postId = params.get('id');
 
     console.log("Query String:", queryString);
 
