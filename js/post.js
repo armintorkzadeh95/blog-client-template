@@ -2,6 +2,7 @@
 function fetchPostDetails(postIndex) {
     const apiUrl = `https://blog-api-assignment.up.railway.app/posts/${postIndex}`;
 
+    // Använd fetch för att hämta data från API
     fetch(apiUrl)
         .then(response => response.json())
         .then(post => displayPostDetails(post))
@@ -10,6 +11,7 @@ function fetchPostDetails(postIndex) {
 
 // Funktion för att visa inläggsdetaljer på sidan
 function displayPostDetails(post) {
+    // Uppdatera DOM-element med inläggsdetaljer
     document.getElementById("postTitle").innerText = post.title;
     document.getElementById("postAuthor").innerText = "Author: " + post.author;
     document.getElementById("postDate").innerText = "Date: " + post.date;
@@ -30,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     console.log("Query String:", queryString);
 
+    // Om post ID finns, hämta inläggsdetaljer
     if (postId) {
         console.log("Post ID:", postId);
         fetchPostDetails(postId);
