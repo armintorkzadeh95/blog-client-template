@@ -22,7 +22,7 @@ function displayPostDetails(post) {
 function goBack() {
     window.history.back();
 }
-let postId;
+postId;
 
 // Händelseavlyssnare för DOMContentLoaded för att hämta inläggsdetaljer
 document.addEventListener("DOMContentLoaded", function () {
