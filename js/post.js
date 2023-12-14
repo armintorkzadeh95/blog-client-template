@@ -1,6 +1,6 @@
 // Funktion för att hämta inläggsdetaljer
 function fetchPostDetails(postIndex) {
-    const apiUrl = `https://blog-api-assignment.up.railway.app/posts/`;
+    const apiUrl = `https://blog-api-assignment.up.railway.app/posts/${postIndex}`;
 
     // Använd fetch för att hämta data från API
     fetch(apiUrl)
