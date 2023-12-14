@@ -29,9 +29,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const queryString = window.location.search;
     const params = new URLSearchParams(queryString);
     const postId = params.get('id');
-
+    
     console.log("Query String:", queryString);
-
+    
     // Om post ID finns, hämta inläggsdetaljer
     if (postId) {
         console.log("Post ID:", postId);
