@@ -28,8 +28,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const queryString = window.location.search;
     const params = new URLSearchParams(queryString);
     const postId = params.get('id');
-    console.log("Post ID:", postId);
-    fetchPostDetails(postId);
+
+    if (postId) {
+        console.log("Post ID:", postId);
+        fetchPostDetails(postId);
+    } else {
+        console.error("Post ID not found in the URL.");
+    }
 });
 
 // Funktion för att visa mer innehåll
