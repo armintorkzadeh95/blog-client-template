@@ -3,7 +3,7 @@ const apiUrl = "https://blog-api-assignment.up.railway.app/posts";
 
 document.addEventListener("DOMContentLoaded", function () {
     // Befintliga kod här
-    fetchPostDetails(0);});
+    fetchPostDetails("6579908e31b9d5002a63933b");});
 
 function fetchPostDetails(postIndex) {
     // Gör GET-förfrågan till API-slutpunkten
