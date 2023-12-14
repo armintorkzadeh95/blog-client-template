@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
             blogPostsContainer.appendChild(postElement);
         });
 
-        // Add event listeners to "Read more" links
+        // Lägg till evenemangslyssnare till "Läs mer"-länkar
         const readMoreLinks = document.querySelectorAll('.read-more-link');
         readMoreLinks.forEach(link => {
             link.addEventListener('click', function (event) {
