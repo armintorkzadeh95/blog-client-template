@@ -1,9 +1,8 @@
-// API-slutpunkt för blogginlägg
-const apiUrl = `https://blog-api-assignment.up.railway.app/posts/${postId}`;
-
-// Funktion för att hämta inläggsdetaljer med postId
+// Funktion för att hämta inläggsdetaljer
 function fetchPostDetails(postIndex) {
-    fetch(`${apiUrl}/${postIndex}`)
+    const apiUrl = `https://blog-api-assignment.up.railway.app/posts/${postIndex}`;
+
+    fetch(apiUrl)
         .then(response => response.json())
         .then(post => displayPostDetails(post))
         .catch(error => console.error('Error fetching post:', error));
@@ -28,7 +27,8 @@ postId;
 document.addEventListener("DOMContentLoaded", function () {
     const queryString = window.location.search;
     const params = new URLSearchParams(queryString);
-    postId = params.get('id');
+    const postId = params.get('id');
+    const apiUrl = `https://blog-api-assignment.up.railway.app/posts/${postId}`;
 
     console.log("Query String:", queryString);
 
