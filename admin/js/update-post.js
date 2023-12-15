@@ -6,7 +6,7 @@ function fillForm() {
     document.getElementById('title').value = postData.title;
     document.getElementById('content').value = postData.content;
 }
-
+// Funktionen returnerar exempel på postdata
 function getPostData() {
     return {
         title: "Sample Title",
