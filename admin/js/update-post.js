@@ -9,8 +9,8 @@ function fillForm() {
 // Funktionen returnerar exempel på postdata
 function getPostData() {
     return {
-        title: "Sample Title",
-        content: "Sample Content"
+        title: "",
+        content: ""
     };
 }
 
