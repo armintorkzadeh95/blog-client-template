@@ -1,3 +1,4 @@
+// Den här funktionen returnerar exempel på postdata
 function sendUpdatedPost(data) {
     console.log("Data sent:", data);
     return true;
