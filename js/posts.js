@@ -20,16 +20,16 @@ document.addEventListener("DOMContentLoaded", function () {
     function displayBlogPosts(posts) {
         // Hämta containerelementet där blogginlägg kommer att visas
         const blogPostsContainer = document.getElementById('blog-posts');
-
+        console.log(posts);
         // Gå igenom varje blogginlägg och skapa HTML-element för att visa dem
         posts.forEach(post => {
             const postElement = document.createElement('div');
-            postElement.innerHTML = `
+            postElement.innerHTML= `
                 <h2>${post.title}</h2>
                 <p>Author: ${post.author}</p>
                 <p>Date: ${post.date}</p>
                 <p>${truncateText(post.content, 100)}</p>
-                <a href="#" class="read-more-link" data-post-id="${post.id}">Read more...</a>
+                <a href="post.html?${_id}=${post.id}" class="read-more-link" data-post-id="${post.id}">Read more...</a>
                 <p>Tags: ${post.tags ? post.tags.join(', ') : 'No tags'}</p>
                 <hr>
             `;
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Funktion för att trunkera text till en angiven maximal längd
     function truncateText(text, maxLength) {
-        return text.length > maxLength ? text.slice(0, maxLength) + '...' : text;
+        return text && text.length > maxLength ? text.slice(0, maxLength) + '...' : text;
     }
 
     // Funktion för att visa en läs mer-varning med hela innehållet
