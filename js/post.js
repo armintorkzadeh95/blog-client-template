@@ -13,9 +13,9 @@ fetch(apiUrl)
 function displayPostDetails(post) {
     // Uppdatera DOM-element med inläggsdetaljer
     document.getElementById("postTitle").innerText = post.title;
-    document.getElementById("postAuthor").innerText = "Author: " + post.author;
-    document.getElementById("postDate").innerText = "Date: " + post.date;
-    document.getElementById("postTags").innerText = "Tags: " + (post.tags ? post.tags.join(", ") : "N/A");
+    document.getElementById("postAuthor").innerText = "Författare: " + post.author;
+    document.getElementById("postDate").innerText = "Datum: " + post.date;
+    document.getElementById("postTags").innerText = "Tagg: " + (post.tags ? post.tags.join(", ") : "N/A");
     document.getElementById("postContent").innerHTML = post.content;
 }
 
