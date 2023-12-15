@@ -16,6 +16,6 @@ async function fetchPostDetails(id) {
             <p>${post.content}</p>
         `;
     } catch (error) {
-        console.error('Error fetching post')
+        console.error('Error fetching post details:', error);
     }
 }
