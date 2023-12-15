@@ -1,3 +1,8 @@
+function sendUpdatedPost(data) {
+    console.log("Data sent:", data);
+    return true;
+}
+
 // Den här funktionen fyller formuläret med data som erhållits från funktionen getPostData().
 function fillForm() {
     const postData = getPostData();
