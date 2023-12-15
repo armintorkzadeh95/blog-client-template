@@ -1,23 +1,8 @@
-// Den här funktionen returnerar exempel på postdata
-function sendUpdatedPost(data) {
-    console.log("Data sent:", data);
-    return true;
-}
-
 // Den här funktionen fyller formuläret med data som erhållits från funktionen getPostData().
 function fillForm() {
-    const postData = getPostData();
-
     // Ställ in värdet på inmatningsfältet 'titel' till titeln och textområdet "innehåll" till innehållet från postData
     document.getElementById('title').value = postData.title;
     document.getElementById('content').value = postData.content;
-}
-// Funktionen returnerar exempel på postdata
-function getPostData() {
-    return {
-        title: "",
-        content: ""
-    };
 }
 
 // Funktionen uppdaterar ett inlägg med data som anges i formuläret.
@@ -32,4 +17,4 @@ function updatePost() {
     }
 }
 // Anrop funktionen fillForm() för att fylla i formuläret med initiala data
-fillForm();
+window.onload=fillForm;
