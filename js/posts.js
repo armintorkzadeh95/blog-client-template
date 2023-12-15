@@ -28,9 +28,9 @@ document.addEventListener("DOMContentLoaded", function () {
             postElement.innerHTML = `
             <tr data-id="${post._id}">
                 <h2 class="editable" contenteditable="true">${post.title}</h2>
-                <p>${post.author} ${new Date().toLocaleDateString()}</p>
-                <p>${post.tags}</p>
-                <p>${post.content.slice(0, 100)}</p>
+                <p>Författare: ${post.author} ${new Date().toLocaleDateString()}</p>
+                <p>Tagg: ${post.tags}</p>
+                <p>Innehåll:${post.content.slice(0, 100)}</p>
                 <a href="post.html?id=${post._id}" data-post-id="${post._id}">Read more</a>
             </tr>
         `;
