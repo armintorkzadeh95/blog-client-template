@@ -1,3 +1,9 @@
+// Definiera postData med exempeldata
+const postData = {
+    title: "",
+    content: ""
+};
+
 // Den här funktionen fyller formuläret med data som erhållits från funktionen getPostData().
 function fillForm() {
     // Ställ in värdet på inmatningsfältet 'titel' till titeln och textområdet "innehåll" till innehållet från postData
