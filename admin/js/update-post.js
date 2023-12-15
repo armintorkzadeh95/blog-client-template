@@ -3,3 +3,8 @@ function fillForm() {
     document.getElementById('title').value = postData.title;
     document.getElementById('content').value = postData.content;
 }
+function updatePost() {
+    const updatedData = {
+        title: document.getElementById('title').value,
+        content: document.getElementById('content').value
+    };
