@@ -8,3 +8,10 @@ function updatePost() {
         title: document.getElementById('title').value,
         content: document.getElementById('content').value
     };
+
+    if (sendUpdatedPost(updatedData)) {
+        window.location.href = 'admin/index.html';
+    }
+}
+
+fillForm();
