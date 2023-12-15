@@ -6,6 +6,14 @@ function fillForm() {
     document.getElementById('title').value = postData.title;
     document.getElementById('content').value = postData.content;
 }
+
+function getPostData() {
+    return {
+        title: "Sample Title",
+        content: "Sample Content"
+    };
+}
+
 // Funktionen uppdaterar ett inlägg med data som anges i formuläret.
 function updatePost() {
     const updatedData = {
