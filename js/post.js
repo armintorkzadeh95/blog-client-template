@@ -15,3 +15,7 @@ async function fetchPostDetails(id) {
             <p>${post.tags}</p>
             <p>${post.content}</p>
         `;
+    } catch (error) {
+        console.error('Error fetching post')
+    }
+}
